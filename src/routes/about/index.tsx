@@ -1,4 +1,5 @@
 import { component$ } from "@builder.io/qwik";
+import { DocumentHead } from "@builder.io/qwik-city";
 
 export default component$(() => {
   return (
@@ -7,3 +8,13 @@ export default component$(() => {
     </>
   )
 });
+
+export const head: DocumentHead = {
+  title: "About me",
+  meta: [
+    {
+      name: "description",
+      content: "About description",
+    },
+  ],
+};

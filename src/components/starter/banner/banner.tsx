@@ -12,9 +12,13 @@ export const Banner = component$(() => {
     <>
         <section class="banner">
             <div class="absolute">
-                <h1>{titleSignal.value}</h1>
-                <span>{subTitleSignal.value}</span>
-                
+                <h1 class="relative text-8xl">{titleSignal.value}</h1>
+                <div class="relative text-sm ">{subTitleSignal.value}</div>
+                <div class="h-fit relative my-4">
+                  <a class="relative rounded bg-blue-700 px-4 py-2 text-md font-semibold text-white shadow-sm hover:bg-white hover:text-blue-500" href="/contact">
+                    Contact us
+                  </a>
+                </div>
             </div>
         </section>
     </>

@@ -1,5 +1,7 @@
 import { component$ } from "@builder.io/qwik";
 import styles from "./header.module.css";
+import { Link } from "@builder.io/qwik-city";
+import { SiDribbble, SiGithub, SiLinkedin } from "@qwikest/icons/simpleicons";
 
 export default component$(() => {
   return (
@@ -10,37 +12,19 @@ export default component$(() => {
             LOGO
           </a>
         </div>
-        <ul>
-          <li>
-            <a
-              href="/"
-              >
-              Accueil
-            </a>
-          </li>
-          <li>
-            <a
-              href="/about"
-              >
-              About us
-            </a>
-          </li>
-          <li>
-            <a
-              href="/blog"
-              >
-              Blog
-            </a>
-          </li>
-          <li>
-            <a
-              href="/contact"
-              
-            >
-              Contact
-            </a>
-          </li>
-        </ul>
+        <nav class={styles.nav}>
+          <ul>
+            <li><Link href="/">Accueil</Link></li>
+            <li><Link href="/about">About us</Link></li>
+            <li><Link href="/blog">Blog</Link></li>
+            <li><Link href="/contact">Contact</Link></li>
+          </ul>
+        </nav>
+        <div class={styles.socials}>
+          <a href="http://www.github.com" title="Github" target="_blank"><SiGithub /></a>
+          <a href="http://www.linkedin.com" title="LinkedIn" target="_blank"><SiLinkedin /></a>
+          <a href="http://www.dribbble.com" title="Dribbble" target="_blank"><SiDribbble /></a>
+        </div>
       </div>
     </header>
   );

@@ -11,35 +11,49 @@ header{
 
 .logo {
   display: inline-block;
+  width: 15%;
 }
 .logo a {
   display: block;
 }
 
-.header ul {
+.nav{
+  width: 60%;
+}
+
+.nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
   display: flex;
+  justify-content: center;
   gap: 30px;
 }
 
-.header li {
+.nav li {
   display: none;
   margin: 0;
   padding: 0;
   font-size: 0.7rem;
 }
 
-.header li a {
+.nav li a {
   color: white;
   display: inline-block;
-  padding: 0;
+  padding: .5rem 1.5rem;
   text-decoration: none;
+  font-size: 16px;
 }
 
-.header li a:hover {
+.nav li a:hover {
   color: var(--qwik-light-blue);
+}
+
+.socials {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 10%;
 }
 
 @media (min-width: 450px) {
