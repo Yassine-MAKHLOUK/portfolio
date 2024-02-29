@@ -28,8 +28,8 @@ export const useServerTimeLoader = routeLoader$(() => {
 
 export default component$(() => {
   useStyles$(styles);
-  const titleSignal = useSignal('Title')
-  const subTitleSignal = useSignal('SubTitle')
+  const titleSignal = useSignal('Hello This is Yassine')
+  const subTitleSignal = useSignal('Building Exceptional Web Solutions for a Digital Tomorrow.')
   const bannerImgSignal = useSignal('banner.jpg')
  
   useContextProvider( bannerContextId, {

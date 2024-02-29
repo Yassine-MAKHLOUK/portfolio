@@ -1,0 +1,28 @@
+.about-container {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem 4%;
+    background-color: var(--qwik-dark-lightBackground);
+}
+
+.about-pics {
+    width: 45%;
+}
+
+.about-text {
+    width: 50%;
+    text-align: left;
+    margin:  0 auto;
+    padding: 1rem 4%;
+}
+.about-text .h1.about-title {
+    font-size: 1.5rem;
+    text-align: left;
+}
+.about-text .about-subTitle {
+    font-size: 3rem;
+    display: block;
+}
+.about-text .about-paragraphe {
+    margin: 1rem 0;
+}

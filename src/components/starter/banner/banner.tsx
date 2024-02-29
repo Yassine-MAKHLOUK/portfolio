@@ -11,12 +11,12 @@ export const Banner = component$(() => {
   return (
     <>
         <section class="banner">
-            <div class="absolute">
-                <h1 class="relative text-8xl">{titleSignal.value}</h1>
+            <div class="absolute text-center">
+                <h1 class="relative text-8xl leading-normal">{titleSignal.value}</h1>
                 <div class="relative text-sm ">{subTitleSignal.value}</div>
-                <div class="h-fit relative my-4">
+                <div class="h-fit relative my-16">
                   <a class="relative rounded bg-blue-700 px-4 py-2 text-md font-semibold text-white shadow-sm hover:bg-white hover:text-blue-500" href="/contact">
-                    Contact us
+                    Let's Talk
                   </a>
                 </div>
             </div>
