@@ -84,6 +84,12 @@ ul {
   padding-left: 20px;
 }
 
+/* SECTION ------------------------------------ */
+section{
+  padding: 4rem 4%;
+}
+
+
 /* CONTAINER ------------------------------------ */
 .container {
   margin: 0 auto;
