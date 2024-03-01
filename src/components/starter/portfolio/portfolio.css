@@ -1,5 +1,7 @@
 /* SECTION ------------------------------------ */
-
+.portfolio-content {
+    padding: 4rem 0;
+}
 
 /* CARDS CONTAINER ------------------------------------ */
 .portfolio-cards{
