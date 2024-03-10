@@ -21,7 +21,7 @@ html {
 
 body {
   background: var(--qwik-dark-background);
-  color: var(--qwik-dark-text);
+  color: var(--qwik-white);
   overflow-x: hidden;
 }
 
@@ -100,7 +100,7 @@ section{
 }
 .container.container-dark {
   background: var(--qwik-dark-background);
-  color: var(--qwik-dark-text);
+  color: var(--qwik-white);
 }
 .container.container-center {
   text-align: center;

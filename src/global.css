@@ -24,7 +24,7 @@
   --qwik-dirty-black: #1d2033;
   --qwik-dark-background: #070707;
   --qwik-dark-lightBackground: #161616;
-  --qwik-dark-text: #ffffff;
+  --qwik-white: #ffffff;
   
 }
 
@@ -62,3 +62,4 @@ body {
   margin: 0;
   line-height: inherit;
 }
+

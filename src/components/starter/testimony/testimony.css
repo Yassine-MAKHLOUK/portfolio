@@ -22,8 +22,20 @@
 
 /* CARDS CONTAINER ------------------------------------ */
 
+.swiper-pagination-bullet-active {
+    background: var(--qwik-white);
+  }
 
 /* CARDS ------------------------------------ */
+.testimony-card {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 3rem 0;
+}
 
 
 /* CARD ------------------------------------ */
+.card-name {
+    font-size: 2rem;
+    line-height: 2;
+}
