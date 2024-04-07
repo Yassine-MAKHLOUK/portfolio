@@ -6,7 +6,7 @@ export const Introduction = component$(() => {
   useStylesScoped$(styles);
   return (
     <>
-        <section class="about_section">
+        <section class="about_section container container-center container-spacing-xl">
             <div class="about-container">
                 <div class="about-pics">
                     <div class="about-pic about-pic1"><ImgPresentationPic /></div>
