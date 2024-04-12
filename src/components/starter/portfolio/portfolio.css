@@ -1,4 +1,8 @@
 /* SECTION ------------------------------------ */
+.portfolio-container {
+  max-width: 1360px;
+  margin: 0 auto;
+}
 .portfolio-content {
     padding: 4rem 0;
 }

@@ -1,3 +1,7 @@
+.about_section {
+    max-width: 1300px;
+    margin: 0 auto;
+}
 .about-container {
     display: flex;
     justify-content: space-evenly;

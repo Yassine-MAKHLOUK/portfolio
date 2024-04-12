@@ -6,6 +6,7 @@ import { SiDribbble, SiGithub, SiLinkedin } from "@qwikest/icons/simpleicons";
 export default component$(() => {
   return (
     <header class={styles.header}>
+      
       <div class={["container", styles.wrapper]}>
         <div class={styles.logo}>
           <a href="/" title="qwik">
