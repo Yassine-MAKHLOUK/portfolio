@@ -1,9 +1,52 @@
-import { component$, useStyles$, useStylesScoped$ } from "@builder.io/qwik";
+import { component$, useSignal, useStyles$, useStylesScoped$, useTask$, useVisibleTask$ } from "@builder.io/qwik";
+
+import { Carousel } from '@qwik-ui/headless';
+import { MatKeyboardArrowRightFilled, MatKeyboardArrowLeftFilled } from "@qwikest/icons/material";
 
 import styles from './testimony.css?inline'
 
+interface testimonyInt {
+    name: string, 
+    testimony: string, 
+    avatar: string
+}
+
 export const Testimony = component$(() => {
     useStylesScoped$(styles);
+    
+    const testimonies  = [
+        {
+            name: "MOHAMED MOUROUH", 
+            testimony: "Yassine is creative and talented web developer. I have had the pleasure of knowing and working with him in the same company. He is an inspirational web developer with so much passion for the service he provides. He uses innovative approaches to tackling and solving problems and I highly recommend him.",
+            avatar: "avatar.jpg"
+        },
+        {
+            name: "Angel Rodriguez", 
+            testimony: " Il est difficile de décrire comment le travail de Yassine m'a impressionné quand j'ai eu la chance de travailler avec lui. J'ai vraiment été impressionné par la façon de travailler de Yassine, qui a réussi à achever son travail plus rapidement que prévu.", 
+            avatar: "avatar.jpg"
+        },
+        {
+            name: "Abdellatif Tijani", 
+            testimony: "I've know yassin in many activites and projects, he's one of the members who can work into different projects with the same knack and a great will.", 
+            avatar: "avatar.jpg"
+        },
+        {
+            name: "HILMI Mohammed", 
+            testimony: "MAKHLOUK is a great developer, very active. he has flexibility in communication, especially in English. very good organization and mobilization rating, very good technical knowledge in frontend and backend, I often saw Makhlouk as someone I could always count on to get the job done.It has been my pleasure working with and I extremely recommend him.", 
+            avatar: "avatar.jpg"
+        },
+        {
+            name: "Marouane Moumni", 
+            testimony: "it's really hard to find a team member that is always ready to put high effort on a project, Yassine is one of the best people I've ever worked with at YouCode, I was very glad to have him on the team, he's very skilled, talented and a man that is very reliable, he helps me a lot during many projects. I'll be always highly recommending Yassine!", 
+            avatar: "avatar.jpg"
+        }
+    ];
+    const isPlaying = useSignal<boolean>(false);
+    
+    useVisibleTask$(() => {
+        isPlaying.value = true;
+      })
+
     
 
     return (<>
@@ -18,73 +61,37 @@ export const Testimony = component$(() => {
                 <div class="testimony-content">
                     
                     <div class="testimony-cards">
-                    <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="true" loop="true" space-between="30"
-    centered-slides="true" autoplay-delay="2500" autoplay-disable-on-interaction="true">
-
-                                <swiper-slide>
-                                <div class="testimony-card">
-                                    <div class="card-head">
-                                        <p class="card-name">MOHAMED MOUROUH</p>
-                                    </div>
-                                    <p class="card-text">
-                                        Yassine is creative and talented web developer. 
-                                        I have had the pleasure of knowing and working with him in the same company.
-                                        He is an inspirational web developer with so much passion for the service he provides.
-                                        He uses innovative approaches to tackling and solving problems and I highly recommend him.
-                                    </p>
+                    <Carousel.Root
+                        class="carousel-root"
+                        gap={30}
+                        loop
+                        autoPlayIntervalMs={3500}
+                        bind:autoplay={isPlaying}
+                    >
+                        <div class="carousel-buttons">
+                        <Carousel.Previous class="bg-transparent rounded-full border border-solid border-white p-4 w-8 h-8 flex justify-center items-center absolute left-0 text-xs text-white"><MatKeyboardArrowLeftFilled/></Carousel.Previous>
+                        <Carousel.Player class="hidden"></Carousel.Player>
+                        <Carousel.Next class="bg-transparent rounded-full border border-solid border-white p-4 w-8 h-8 flex justify-center items-center absolute right-0"><MatKeyboardArrowRightFilled/></Carousel.Next>
+                        </div>
+                        <Carousel.Scroller class="carousel-scroller">
+                        {testimonies.map((element:testimonyInt) => (
+                            <Carousel.Slide key={element.name} class="carousel-slide">
+                            <div class="testimony-card">
+                                <div class="card-head">
+                                    <p class="card-name">{element.name}</p>
                                 </div>
-                                </swiper-slide>
-
-                                <swiper-slide>
-                                <div class="testimony-card">
-                                    <div class="card-head">
-                                        <p class="card-name">Angel Rodriguez</p>
-                                    </div>
-                                    <p class="card-text">
-                                        Il est difficile de décrire comment le travail de Yassine m'a impressionné quand j'ai eu la chance de travailler avec lui. J'ai vraiment été impressionné par la façon de travailler de Yassine, qui a réussi à achever son travail plus rapidement que prévu.
-                                    </p>
-                                </div>
-                                </swiper-slide>
-
-                                <swiper-slide>
-                                <div class="testimony-card">
-                                    <div class="card-head">
-                                        <p class="card-name">Abdellatif Tijani</p>
-                                    </div>
-                                    <p class="card-text">
-                                    I've know yassin in many activites and projects, he's one of the members who can work into different projects with the same knack and a great will.
-                                    </p>
-                                </div>
-                                </swiper-slide>
-
-                                <swiper-slide>
-                                <div class="testimony-card">
-                                    <div class="card-head">
-                                        <p class="card-name">HILMI Mohammed</p>
-                                    </div>
-                                    <p class="card-text">
-                                        MAKHLOUK is a great developer, very active. he has flexibility in communication, especially in English. very good organization and mobilization rating, very good technical knowledge in frontend and backend, I often saw Makhlouk as someone I could always count on to get the job done.It has been my pleasure working with and I extremely recommend him.
-                                    </p>
-                                </div>
-                                </swiper-slide>
-
-                                <swiper-slide>
-                                <div class="testimony-card">
-                                    <div class="card-head">
-                                        <p class="card-name">Marouane Moumni</p>
-                                    </div>
-                                    <p class="card-text">
-                                    it's really hard to find a team member that is always ready to put high effort on a project, Yassine is one of the best people I've ever worked with at YouCode, I was very glad to have him on the team, he's very skilled, talented and a man that is very reliable, he helps me a lot during many projects. 
-                                    I'll be always highly recommending Yassine!
-                                    </p>
-                                </div>
-                                </swiper-slide>
-
-
-                            </swiper-container>
-
+                                <p class="card-text">
+                                {element.testimony}
+                                </p>
+                            </div>
+                            </Carousel.Slide>
+                        ))}
+                        </Carousel.Scroller>
+                    </Carousel.Root>
+                    
+      
+                    
                     </div>
-                  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
         
 
                 </div>
@@ -94,6 +101,4 @@ export const Testimony = component$(() => {
     </>)
   });
 
-function useClientEffect$(arg0: () => void) {
-    throw new Error("Function not implemented.");
-}
+

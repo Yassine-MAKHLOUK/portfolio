@@ -21,10 +21,14 @@
 }
 
 /* CARDS CONTAINER ------------------------------------ */
-
-.swiper-pagination-bullet-active {
-    background: var(--qwik-white);
-  }
+.carousel-buttons button[aria-label="previous slide"] {display: none;}
+.carousel-buttons .nextButton, .carousel-buttons .prevButton {
+    background: transparent;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+}
 
 /* CARDS ------------------------------------ */
 .testimony-card {
