@@ -17,7 +17,7 @@ export const Introduction = component$(() => {
                         <span class="about-subTitle">I bring a cool and collected vibe to coding</span>
                     </h2>
                     <article>
-                        <p class="about-paragraphe">Hello, I'm [Yassine MAKHLOUK], the Web Developer extraordinaire from [Casablanca]. I'm all about turning web challenges into digital triumphs.</p>
+                        <p class="about-paragraphe">Hello, I'm <b>Yassine MAKHLOUK</b>, the Web Developer extraordinaire from [Casablanca]. I'm all about turning web challenges into digital triumphs.</p>
                         <p class="about-paragraphe">Beyond the screen, I draw inspiration from the everyday for a dash of creativity. Ready to turn your web vision into a vibrant reality? Let's connect! Step into my digital workshop, where websites evolve into captivating online adventures.</p>
                         <p class="about-paragraphe">In this vast digital universe, I'm the guide who thrives on staying ahead of the tech game.</p>
                     </article>

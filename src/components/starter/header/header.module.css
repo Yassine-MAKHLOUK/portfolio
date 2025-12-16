@@ -2,11 +2,21 @@ header{
   position: fixed;
   z-index: 9999;
   width: 100%;
+  transition: all 0.3s ease;
+}
+.fixed{
+  background-color: var(--qwik-dark-lightBackground);
+}
+.fixed .container{
+  padding: 1.4rem 4% !important;
 }
 .wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.fixed .wrapper{
+  padding: 1.4rem 4% !important;
 }
 
 .logo {
@@ -16,7 +26,18 @@ header{
 .logo a {
   display: block;
 }
-
+.logo svg {
+  height: auto;
+  max-width: 200px;
+  transition: all 0.3s ease;
+}
+.fixed .logo svg {
+  width: 100%;
+  max-width: 140px;
+}
+.nav_bar{
+  padding: 2rem 4% !important;
+}
 .nav{
   width: 60%;
 }
@@ -54,6 +75,10 @@ header{
   justify-content: space-around;
   align-items: center;
   width: 10%;
+}
+
+.social {
+  color: var(--qwik-white);
 }
 
 @media (min-width: 450px) {

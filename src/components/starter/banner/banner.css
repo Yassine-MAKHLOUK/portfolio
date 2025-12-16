@@ -7,8 +7,14 @@
     justify-content: center;
     align-items: center;
 }
+.banner-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .banner .banner-text {
-    max-width: 600px;
+    max-width: 800px;
 }
 .banner h1 {
     margin-bottom: 1rem;

@@ -1,4 +1,4 @@
-import { component$, useSignal, useStyles$, useStylesScoped$, useTask$, useVisibleTask$ } from "@builder.io/qwik";
+import { component$, useSignal, useStylesScoped$, useVisibleTask$ } from "@builder.io/qwik";
 
 import { Carousel } from '@qwik-ui/headless';
 import { MatKeyboardArrowRightFilled, MatKeyboardArrowLeftFilled } from "@qwikest/icons/material";
@@ -43,9 +43,10 @@ export const Testimony = component$(() => {
     ];
     const isPlaying = useSignal<boolean>(false);
     
+    // eslint-disable-next-line qwik/no-use-visible-task
     useVisibleTask$(() => {
-        isPlaying.value = true;
-      })
+    isPlaying.value = true;
+    });
 
     
 

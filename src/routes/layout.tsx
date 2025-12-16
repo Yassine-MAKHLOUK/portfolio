@@ -40,7 +40,6 @@ export default component$(() => {
   return (
     <>
       <Header />
-      <Banner />
       <main>
         <Slot />
       </main>

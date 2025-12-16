@@ -15,7 +15,6 @@ export default component$(() => {
           <ul>
               <li class={styles.bande_link}><Link class={styles.link} href="/">Accueil</Link></li>
               <li class={styles.bande_link}><Link class={styles.link} href="/about">About us</Link></li>
-              <li class={styles.bande_link}><Link class={styles.link} href="/blog">Blog</Link></li>
               <li class={styles.bande_link}><Link class={styles.link} href="/contact">Contact</Link></li>
             </ul>
         </div>
