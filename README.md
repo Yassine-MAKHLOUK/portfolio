@@ -1,109 +1,91 @@
-# Qwik City App ⚡️
+# Magic Portfolio
 
-- [Qwik Docs](https://qwik.builder.io/)
-- [Discord](https://qwik.builder.io/chat)
-- [Qwik GitHub](https://github.com/BuilderIO/qwik)
-- [@QwikDev](https://twitter.com/QwikDev)
-- [Vite](https://vitejs.dev/)
+Magic Portfolio is a simple, clean, beginner-friendly portfolio template. It supports an MDX-based content system for projects and blog posts, an about / CV page and a gallery.
 
----
+View the demo [here](https://demo.magic-portfolio.com).
 
-## Project Structure
+![Magic Portfolio](public/images/og/home.jpg)
 
-This project is using Qwik with [QwikCity](https://qwik.builder.io/qwikcity/overview/). QwikCity is just an extra set of tools on top of Qwik to make it easier to build a full site, including directory-based routing, layouts, and more.
+## Getting started
 
-Inside your project, you'll see the following directory structure:
-
+**1. Clone the repository**
 ```
-├── public/
-│   └── ...
-└── src/
-    ├── components/
-    │   └── ...
-    └── routes/
-        └── ...
+git clone https://github.com/once-ui-system/magic-portfolio.git
 ```
 
-- `src/routes`: Provides the directory-based routing, which can include a hierarchy of `layout.tsx` layout files, and an `index.tsx` file as the page. Additionally, `index.ts` files are endpoints. Please see the [routing docs](https://qwik.builder.io/qwikcity/routing/overview/) for more info.
-
-- `src/components`: Recommended directory for components.
-
-- `public`: Any static assets, like images, can be placed in the public directory. Please see the [Vite public directory](https://vitejs.dev/guide/assets.html#the-public-directory) for more info.
-
-## Add Integrations and deployment
-
-Use the `npm run qwik add` command to add additional integrations. Some examples of integrations includes: Cloudflare, Netlify or Express Server, and the [Static Site Generator (SSG)](https://qwik.builder.io/qwikcity/guides/static-site-generation/).
-
-```shell
-npm run qwik add # or `yarn qwik add`
+**2. Install dependencies**
+```
+npm install
 ```
 
-## Development
-
-Development mode uses [Vite's development server](https://vitejs.dev/). The `dev` command will server-side render (SSR) the output during development.
-
-```shell
-npm start # or `yarn start`
+**3. Run dev server**
+```
+npm run dev
 ```
 
-> Note: during dev mode, Vite may request a significant number of `.js` files. This does not represent a Qwik production build.
-
-## Preview
-
-The preview command will create a production build of the client modules, a production build of `src/entry.preview.tsx`, and run a local server. The preview server is only for convenience to preview a production build locally and should not be used as a production server.
-
-```shell
-npm run preview # or `yarn preview`
+**4. Edit config**
+```
+src/resources/once-ui.config.js
 ```
 
-## Production
-
-The production build will generate client and server modules by running both client and server build commands. The build command will use Typescript to run a type check on the source code.
-
-```shell
-npm run build # or `yarn build`
+**5. Edit content**
+```
+src/resources/content.js
 ```
 
-## Vercel Edge
-
-This starter site is configured to deploy to [Vercel Edge Functions](https://vercel.com/docs/concepts/functions/edge-functions), which means it will be rendered at an edge location near to your users.
-
-## Installation
-
-The adaptor will add a new `vite.config.ts` within the `adapters/` directory, and a new entry file will be created, such as:
-
+**6. Create blog posts / projects**
 ```
-└── adapters/
-    └── vercel-edge/
-        └── vite.config.ts
-└── src/
-    └── entry.vercel-edge.tsx
+Add a new .mdx file to src/app/blog/posts or src/app/work/projects
 ```
 
-Additionally, within the `package.json`, the `build.server` script will be updated with the Vercel Edge build.
+Magic Portfolio was built with [Once UI](https://once-ui.com) for [Next.js](https://nextjs.org). It requires Node.js v18.17+.
 
-## Production build
+## Documentation
 
-To build the application for production, use the `build` command, this command will automatically run `npm run build.server` and `npm run build.client`:
+Docs available at: [docs.once-ui.com](https://docs.once-ui.com/docs/magic-portfolio/quick-start)
 
-```shell
-npm run build
-```
+## Features
 
-[Read the full guide here](https://github.com/QwikDev/qwik/blob/main/starters/adapters/vercel-edge/README.md)
+### Once UI
+- All tokens, components & features of [Once UI](https://once-ui.com)
 
-## Dev deploy
+### SEO
+- Automatic open-graph and X image generation with next/og
+- Automatic schema and metadata generation based on the content file
 
-To deploy the application for development:
+### Design
+- Responsive layout optimized for all screen sizes
+- Timeless design without heavy animations and motion
+- Endless customization options through [data attributes](https://once-ui.com/docs/theming)
 
-```shell
-npm run deploy
-```
+### Content
+- Render sections conditionally based on the content file
+- Enable or disable pages for blog, work, gallery and about / CV
+- Generate and display social links automatically
+- Set up password protection for URLs
 
-Notice that you might need a [Vercel account](https://docs.Vercel.com/get-started/) in order to complete this step!
+### Localization
+- A localized, earlier version of Magic Portfolio is available with the next-intl library
+- To use localization, switch to the 'i18n' branch
 
-## Production deploy
+## Creators
 
-The project is ready to be deployed to Vercel. However, you will need to create a git repository and push the code to it.
+Lorant One: [Threads](https://www.threads.net/@lorant.one) / [LinkedIn](https://www.linkedin.com/in/lorant-one/)
 
-You can [deploy your site to Vercel](https://vercel.com/docs/concepts/deployments/overview) either via a Git provider integration or through the Vercel CLI.
+## Get involved
+
+- Join the Design Engineers Club on [Discord](https://discord.com/invite/5EyAQ4eNdS) and share your project with us!
+- Deployed your docs? Share it on the [Once UI Hub](https://once-ui.com/hub) too! We feature our favorite apps on our landing page.
+
+## License
+
+Distributed under the CC BY-NC 4.0 License.
+- Attribution is required.
+- Commercial usage is not allowed.
+- You can extend the license to [Dopler CC](https://dopler.app/license) by purchasing a [Once UI Pro](https://once-ui.com/pricing) license.
+
+See `LICENSE.txt` for more information.
+
+## Deploy with Vercel
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fonce-ui-system%2Fmagic-portfolio&project-name=portfolio&repository-name=portfolio&redirect-url=https%3A%2F%2Fgithub.com%2Fonce-ui-system%2Fmagic-portfolio&demo-title=Magic%20Portfolio&demo-description=Showcase%20your%20designers%20or%20developer%20portfolio&demo-url=https%3A%2F%2Fdemo.magic-portfolio.com&demo-image=%2F%2Fraw.githubusercontent.com%2Fonce-ui-system%2Fmagic-portfolio%2Fmain%2Fpublic%2Fimages%2Fog%2Fhome.jpg)
