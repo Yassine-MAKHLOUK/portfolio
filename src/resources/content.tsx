@@ -25,25 +25,25 @@ const social: Social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system",
+    link: "https://github.com/Yassine-MAKHLOUK",
     essential: true,
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/in/yassine-makhlouk-javajee-developpeur-/",
     essential: true,
   },
   {
     name: "Instagram",
     icon: "instagram",
-    link: "https://www.instagram.com/once_ui/",
+    link: "https://www.instagram.com/",
     essential: false,
   },
   {
     name: "Threads",
     icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    link: "https://www.threads.com/",
     essential: true,
   },
   {
@@ -60,7 +60,7 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>Building Exceptional Web Solutions for a Digital Tomorrow.</>,
   featured: {
     display: true,
     title: (
@@ -76,7 +76,7 @@ const home: Home = {
   },
   subline: (
     <>
-    I'm Selene, a design engineer at <Text as="span" size="xl" weight="strong">ONCE UI</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
+    I'm {person.firstName}, a {person.role}, I craft wonderful <br /> web sites/web Apps . feel free to brouse my portfolio.
 </>
   ),
 };
@@ -102,9 +102,7 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        {person.firstName} is a digital product builder who believes the best solutions feel simple — even when the problem isn't. He works across interface design, interaction, and front-end development to create experiences that are both useful and memorable. No fluff, no over-engineering: just practical, people-first digital work.
       </>
     ),
   },
@@ -113,17 +111,15 @@ const about: About = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "futur digital",
+        timeframe: "juin 2022 – juin 2025",
+        role: "Frontend Developer",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Creating +150 webSite, Using the technologies : HTML - CSS - PHP - jQuery - MySQL - Bootstrap - Shopify
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Collaborating with Project-managers to deliver high-quality projects on time, resulting in a 20% increase in client satisfaction.
           </>,
         ],
         images: [
@@ -137,17 +133,26 @@ const about: About = {
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "Smart Transformation",
+        timeframe: "jul 2021 – Déc 2021",
+        role: "Full stack developer",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Colaborateing with a team of 3 persons to Create a superAdmin application for the Web application DOCCERTS, Using the technologies : SpringBoot - Angular11 - MongoDB.
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Creating a notification Système for the application DOCCERTS, Using the technologies : SpringBoot - Angular11 - MongoDB.
+          </>,
+        ],
+        images: [],
+      },
+      {
+        company: "Smart Transformation",
+        timeframe: "juin 2020 - aug 2020",
+        role: "Wordpress developer",
+        achievements: [
+          <>
+            Creating Wordpress websites.
           </>,
         ],
         images: [],
@@ -156,15 +161,15 @@ const about: About = {
   },
   studies: {
     display: true, // set to false to hide this section
-    title: "Studies",
+    title: "Education",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "CIGMA",
+        description: <>Professional Bachelor's Degree in Full Stack Development</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Youcode",
+        description: <>Web Developer Training, Java JEE Specialization.</>,
       },
     ],
   },
