@@ -35,18 +35,6 @@ const social: Social = [
     essential: true,
   },
   {
-    name: "Instagram",
-    icon: "instagram",
-    link: "https://www.instagram.com/",
-    essential: false,
-  },
-  {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/",
-    essential: true,
-  },
-  {
     name: "Email",
     icon: "email",
     link: `mailto:${person.email}`,
@@ -65,14 +53,14 @@ const home: Home = {
     display: true,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">Once UI</strong>{" "}
+        <strong className="ml-4">Yassine</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
-          Featured work
+          MAKHLOUK
         </Text>
       </Row>
     ),
-    href: "/work/building-once-ui-a-customizable-design-system",
+    href: "/about",
   },
   subline: (
     <>
@@ -125,8 +113,8 @@ const about: About = {
         images: [
           // optional: leave the array empty if you don't want to display images
           {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
+            src: "/images/projects/project-01/fd-pic.jpg",
+            alt: "Futur digital",
             width: 16,
             height: 9,
           },
@@ -144,7 +132,14 @@ const about: About = {
             Creating a notification Système for the application DOCCERTS, Using the technologies : SpringBoot - Angular11 - MongoDB.
           </>,
         ],
-        images: [],
+        images: [
+          {
+            src: "/images/projects/project-02/doccert-pic.jpg",
+            alt: "Doccerts",
+            width: 16,
+            height: 9,
+          },
+        ],
       },
       {
         company: "Smart Transformation",
@@ -178,36 +173,9 @@ const about: About = {
     title: "Technical skills",
     skills: [
       {
-        title: "Figma",
+        title: "Front-end",
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
-        ),
-        tags: [
-          {
-            name: "Figma",
-            icon: "figma",
-          },
-        ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },
-      {
-        title: "Next.js",
-        description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+          <> </>
         ),
         tags: [
           {
@@ -215,22 +183,194 @@ const about: About = {
             icon: "javascript",
           },
           {
+            name: "Typescript",
+            icon: "typescript",
+          },
+          {
+            name: "Angular",
+            icon: "angular",
+          },
+          {
+            name: "React",
+            icon: "react",
+          },
+          {
             name: "Next.js",
             icon: "nextjs",
           },
           {
-            name: "Supabase",
-            icon: "supabase",
+            name: "HTML",
+            icon: "html",
+          },
+          {
+            name: "CSS",
+            icon: "css",
+          },
+          {
+            name: "SCSS",
+            icon: "scss",
+          },
+          {
+            name: "JQuery",
+            icon: "jquery",
+          },
+          {
+            name: "Tailwind CSS",
+            icon: "tailwind",
+          },
+          {
+            name: "Bootstrap",
+            icon: "bootstrap",
+          },
+          {
+            name: "JavaFx",
+            icon: "javafx",
           },
         ],
         // optional: leave the array empty if you don't want to display images
         images: [
+          // {
+          //   src: "/images/projects/project-01/cover-02.jpg",
+          //   alt: "Project image",
+          //   width: 16,
+          //   height: 9,
+          // },
+        ],
+      },
+      {
+        title: "Back-end",
+        description: (
+          <> </>
+        ),
+        tags: [
           {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
+            name: "Java",
+            icon: "java",
           },
+          {
+            name: "SpringBoot",
+            icon: "springboot",
+          },
+          {
+            name: "Laravel",
+            icon: "laravel",
+          },
+          {
+            name: "Hibernate",
+            icon: "hibernate",
+          },
+          {
+            name: "PHP",
+            icon: "php",
+          },
+        ],
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          // {
+          //   src: "/images/projects/project-01/cover-04.jpg",
+          //   alt: "Project image",
+          //   width: 16,
+          //   height: 9,
+          // },
+        ],
+      },
+      {
+        title: "SGBD",
+        description: (
+          <> </>
+        ),
+        tags: [
+          {
+            name: "MySQL",
+            icon: "mysql",
+          },
+          {
+            name: "MongoDB",
+            icon: "mongodb",
+          },
+          {
+            name: "PostgreSQL",
+            icon: "postgres",
+          },
+        ],
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          // {
+          //   src: "/images/projects/project-01/cover-04.jpg",
+          //   alt: "Project image",
+          //   width: 16,
+          //   height: 9,
+          // },
+        ],
+      },
+      {
+        title: "CMS",
+        description: (
+          <> </>
+        ),
+        tags: [
+          {
+            name: "WordPress",
+            icon: "wordpress",
+          },
+          {
+            name: "Shopify",
+            icon: "shopify",
+          },
+          {
+            name: "Drupal",
+            icon: "drupal",
+          },
+        ],
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          // {
+          //   src: "/images/projects/project-01/cover-04.jpg",
+          //   alt: "Project image",
+          //   width: 16,
+          //   height: 9,
+          // },
+        ],
+      },
+      {
+        title: "Workflow & Tools",
+        description: (
+          <> </>
+        ),
+        tags: [
+          {
+            name: "GitHub",
+            icon: "github",
+          },
+          {
+            name: "Docker",
+            icon: "docker",
+          },
+          {
+            name: "Jira",
+            icon: "jira",
+          },
+          {
+            name: "Trello",
+            icon: "trello",
+          },
+          {
+            name: "Discord",
+            icon: "discord",
+          },
+          {
+            name: "Notion",
+            icon: "notion",
+          },
+        ],
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          // {
+          //   src: "/images/projects/project-01/cover-04.jpg",
+          //   alt: "Project image",
+          //   width: 16,
+          //   height: 9,
+          // },
         ],
       },
     ],
